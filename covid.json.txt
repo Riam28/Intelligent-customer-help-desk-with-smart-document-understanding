@@ -1,0 +1,56 @@
+[
+    {
+        "id": "7b1f460c.943478",
+        "type": "ui_form",
+        "z": "6fdd986b.22ea78",
+        "name": "",
+        "label": "",
+        "group": "8980c775.6a1478",
+        "order": 1,
+        "width": 22,
+        "height": 2,
+        "options": [
+            {
+                "label": "enter the question",
+                "value": "input",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "input": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "",
+        "x": 210,
+        "y": 60,
+        "wires": [
+            [
+                "4f6fac75.83eb44"
+            ]
+        ]
+    },
+    {
+        "id": "8980c775.6a1478",
+        "type": "ui_group",
+        "z": "",
+        "name": "Customer Help",
+        "tab": "55daee53.f96fa",
+        "order": 1,
+        "disp": true,
+        "width": "22",
+        "collapse": false
+    },
+    {
+        "id": "55daee53.f96fa",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Chatbot",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
