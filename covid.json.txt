@@ -1,56 +1,1028 @@
-[
+{
+  "intents": [
     {
-        "id": "7b1f460c.943478",
-        "type": "ui_form",
-        "z": "6fdd986b.22ea78",
-        "name": "",
-        "label": "",
-        "group": "8980c775.6a1478",
-        "order": 1,
-        "width": 22,
-        "height": 2,
-        "options": [
-            {
-                "label": "enter the question",
-                "value": "input",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "input": ""
+      "intent": "contagious",
+      "examples": [
+        {
+          "text": "Is coronavirus contagious?"
         },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "",
-        "x": 210,
-        "y": 60,
-        "wires": [
-            [
-                "4f6fac75.83eb44"
-            ]
-        ]
+        {
+          "text": "Does coronavirus spread from person to person?"
+        }
+      ],
+      "description": ""
     },
     {
-        "id": "8980c775.6a1478",
-        "type": "ui_group",
-        "z": "",
-        "name": "Customer Help",
-        "tab": "55daee53.f96fa",
-        "order": 1,
-        "disp": true,
-        "width": "22",
-        "collapse": false
+      "intent": "china",
+      "examples": [
+        {
+          "text": "Should i stop buying products from China?"
+        },
+        {
+          "text": "Am I at risk for COVID-19 from a package or products shipping from China?"
+        },
+        {
+          "text": "Is it safe to buy Chinese products?"
+        }
+      ],
+      "description": ""
     },
     {
-        "id": "55daee53.f96fa",
-        "type": "ui_tab",
-        "z": "",
-        "name": "Chatbot",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
+      "intent": "washhands",
+      "examples": [
+        {
+          "text": "Should I wear a mask?"
+        },
+        {
+          "text": "How much do PPEs cost?"
+        },
+        {
+          "text": "How to wash hands properly to prevent corona?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "socialdistancing",
+      "examples": [
+        {
+          "text": "What is social distancing?"
+        },
+        {
+          "text": "What is quarantine?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "testresults",
+      "examples": [
+        {
+          "text": "Can there be false negative results?"
+        },
+        {
+          "text": "Can there be false positive results?"
+        },
+        {
+          "text": "If you test negative can you still get COVID-19 later?"
+        },
+        {
+          "text": "What do coronavirus test results mean?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "basics",
+      "examples": [
+        {
+          "text": "What is coronavirus?"
+        },
+        {
+          "text": "What are the symptoms of coronavirus?"
+        },
+        {
+          "text": "How and where was coronavirus originated?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "news",
+      "examples": [
+        {
+          "text": "Latest news about covid-19"
+        },
+        {
+          "text": "Latest news on coronavirus"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "thanks",
+      "examples": [
+        {
+          "text": "ty"
+        },
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "thanks a lot"
+        },
+        {
+          "text": "thank you"
+        },
+        {
+          "text": "tysm"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "treatment",
+      "examples": [
+        {
+          "text": "treatment for covid"
+        },
+        {
+          "text": "cure for corona"
+        },
+        {
+          "text": "cure for covid"
+        },
+        {
+          "text": "vaccination for corona"
+        },
+        {
+          "text": "vaccination for covid"
+        },
+        {
+          "text": "vaccine for covid"
+        },
+        {
+          "text": "vaccine for corona"
+        },
+        {
+          "text": "treatment for corona"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "updates",
+      "examples": [
+        {
+          "text": "coronavirus updates"
+        },
+        {
+          "text": "coronavirus condition worldwide"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "lockdown",
+      "examples": [
+        {
+          "text": "lockdown updates"
+        },
+        {
+          "text": "quarantine time"
+        },
+        {
+          "text": "quarantine"
+        },
+        {
+          "text": "lockdown dates"
+        },
+        {
+          "text": "lockdown extension"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "helpline",
+      "examples": [
+        {
+          "text": "numbers for senior citizens"
+        },
+        {
+          "text": "helpline numbers for anxiety"
+        },
+        {
+          "text": "helpline for mental health"
+        },
+        {
+          "text": "helpline for corona treatment"
+        },
+        {
+          "text": "helpline for covid treatment"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "good evening"
+        },
+        {
+          "text": "good afternoon"
+        },
+        {
+          "text": "hi"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "hey"
+        },
+        {
+          "text": "good morning"
+        }
+      ],
+      "description": ""
     }
-]
+  ],
+  "entities": [
+    {
+      "entity": "socialdistancing",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "social distancing",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "quarantine",
+          "synonyms": [
+            "quarantines",
+            "lockdown",
+            "quarentine"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "covid",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "covid",
+          "synonyms": [
+            "covid-19",
+            "corona",
+            "coronavirus",
+            "sars"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "test",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "results",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "test",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "negative",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "washhands",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "mask",
+          "synonyms": [
+            "masks"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "wash",
+          "synonyms": [
+            "sanitize",
+            "disinfect",
+            "rinse",
+            "washing",
+            "clean",
+            "sanitise",
+            "sanitizing",
+            "sterilize",
+            "decontaminate"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "PPE",
+          "synonyms": [
+            "PPEs"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "good evening",
+          "synonyms": [
+            "ge",
+            "goodevening",
+            "evening",
+            "gud evning",
+            "night"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "good morning",
+          "synonyms": [
+            "gm",
+            "gud mrng",
+            "goodmorning",
+            "morning"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "hi",
+          "synonyms": [
+            "HI",
+            "Hello",
+            "hey",
+            "hiya"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "good afternoon",
+          "synonyms": [
+            "ga",
+            "gud aftrnoon",
+            "goodafternoon",
+            "afternoon"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "basics",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "corona",
+          "synonyms": [
+            "covid",
+            "covid-19"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "symptoms",
+          "synonyms": [
+            "symptom",
+            "symtoms"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "origin",
+          "synonyms": [
+            "origins",
+            "origen"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "treatment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "treatment",
+          "synonyms": [
+            "cure",
+            "medicine"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "helpline",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "helpline",
+          "synonyms": [
+            "number",
+            "helpline number"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "news",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "news",
+          "synonyms": [
+            "reports",
+            "headlines",
+            "articles",
+            "media",
+            "newspaper",
+            "newsletter"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    },
+    "from-sample": true
+  },
+  "webhooks": [
+    {
+      "url": "https://eu-gb.functions.cloud.ibm.com/api/v1/web/riya.mt%40somaiya.edu_dev/covid-19/covid-19.json",
+      "name": "main_webhook",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Basic MTVkNjU5N2YtZmIzOS00MjE2LTk4NDUtM2NhZGI5OTZjYmZkOnE5bEtEWUVTVzN5R1VqZjFWRUhtMFNjYVhJQUFEc2xEUk5Dc29IRWhjVEo5QUR5WXJDN1Z1eUhkRnFBNEh0dVog"
+        }
+      ]
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Latest news is $webhook_result_1"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1590577304067",
+      "conditions": "@news",
+      "dialog_node": "response_9_1590592322838"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "I didn't understand. You can try rephrasing."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1590338716804",
+      "conditions": "anything_else",
+      "dialog_node": "response_1_1590342401797",
+      "previous_sibling": "response_9_1590342393570"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Good Morning.How can I help you?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1590338716804",
+      "conditions": "@greetings:(good morning)",
+      "dialog_node": "response_7_1590419757159",
+      "previous_sibling": "response_1_1590342401797"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Good Afternoon.How can I help you?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1590338716804",
+      "conditions": "@greetings:(good afternoon)",
+      "dialog_node": "response_10_1590419791609",
+      "previous_sibling": "response_7_1590419757159"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1590338716804",
+      "dialog_node": "response_4_1590419838765",
+      "previous_sibling": "response_7_1590419821603"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Good Evening.How can I help you?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1590338716804",
+      "conditions": "@greetings:(good evening)",
+      "dialog_node": "response_7_1590419821603",
+      "previous_sibling": "response_10_1590419791609"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Hello. How can I help you?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1590338716804",
+      "conditions": "@greetings",
+      "dialog_node": "response_9_1590342393570",
+      "previous_sibling": "response_10_1590342381373"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Hello. How can I help you?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1590338716804",
+      "conditions": "#greetings",
+      "dialog_node": "response_10_1590342381373"
+    },
+    {
+      "type": "response_condition",
+      "parent": "node_2_1590420081112",
+      "conditions": "anything_else",
+      "dialog_node": "response_10_1590501300379",
+      "previous_sibling": "response_6_1590420366962"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What would you like to know? Please be specific."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1590420081112",
+      "conditions": "#updates",
+      "dialog_node": "response_6_1590420366962"
+    },
+    {
+      "type": "standard",
+      "title": "social distancing1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It is a strict isolation imposed to prevent the spread of disease."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#socialdistancing || @socialdistancing:quarantine",
+      "dialog_node": "node_5_1590511065225",
+      "previous_sibling": "node_6_1590511015209"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_4_1590422057790",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "test",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Coronavirus test results are not 100% accurate as of now. There can be false positives and false negatives too.  You should check for symptoms and contact a medical practitioner as soon as possible in case of discomfort."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#testresults || @test",
+      "dialog_node": "node_6_1590511740038",
+      "previous_sibling": "node_8_1590511196226"
+    },
+    {
+      "type": "standard",
+      "title": "corona2",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The recent outbreak began in Wuhan, a city in the Hubei province of China. Reports of the first COVID-19 cases started in December 2019.\nCoronaviruses are common in certain species of animals, such as cattle and camels. Although the transmission of coronaviruses from animals to humans is rare, this new strain likely came from bats, though one study suggests pangolins may be the origin.\nHowever, it remains unclear exactly how the virus first spread to humans."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#basics || @basics:origin",
+      "dialog_node": "node_5_1590498782996",
+      "previous_sibling": "node_9_1590498718865"
+    },
+    {
+      "type": "standard",
+      "title": "helpline",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "These are the helpline numbers:                                            \nCentral Helpline Number for corona-virus: - +91-11-23978046\n                                                                                                      Helpline Number for senior citizens: 1077                    \n                                                                                                 NIMHANS: 08046110007\n\nMumbai-based mental health organisation mPower and the government of Maharasthra and BMC: 1800-120-820050\n\nPoddar Foundation and Rotary Club of Bombay: 1800-121-0980\n\nAssam Police and the Department of Psychiatry, GMCH and Clinical Psychologists/psychiatric Social Workers: 6026901053/54/55 or 6026901056/57/58."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#helpline || @helpline",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1590422288467",
+      "previous_sibling": "node_5_1590511065225"
+    },
+    {
+      "type": "standard",
+      "title": "wash hands2",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "If you are healthy, you only need to wear a mask if you are taking care of a person with COVID-19.\nWear a mask if you are coughing or sneezing.\nMasks are effective only when used in combination with frequent hand-cleaning with alcohol-based hand rub or soap and water.\nIf you wear a mask, then you must know how to use it and dispose of it properly."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#washhands || @washhands:mask",
+      "dialog_node": "node_6_1590510126901",
+      "previous_sibling": "node_5_1590510092244"
+    },
+    {
+      "type": "standard",
+      "title": "wash hands1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "In March, one PPE kit with an N95 mask cost around Rs 1,100.\nThe same package today costs Rs 812. With a three-ply mask,\nit now costs Rs 660 as against the earlier price of Rs 990.\nAt Rs 42, an N95 mask is down by Rs 23. A 3-ply mask earlier cost Rs 16 but now it’s priced at Rs 11. A month into anti-hoarding drives and stringent guidelines, the civic body said it has also overcome the shortage with the help of donors and CSR funds.\n\n\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#washhands || @washhands:PPE",
+      "dialog_node": "node_5_1590510092244",
+      "previous_sibling": "node_2_1590502584796"
+    },
+    {
+      "type": "standard",
+      "title": "covid",
+      "metadata": {
+        "callout": {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "type": "api",
+            "country": "US"
+          },
+          "result_variable": "webhook_result_1"
+        },
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@covid",
+      "dialog_node": "node_2_1590420081112",
+      "previous_sibling": "node_5_1590498782996"
+    },
+    {
+      "type": "standard",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#greetings || @greetings",
+      "dialog_node": "node_7_1590338716804",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "corona1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.\nMost common symptoms:\nfever\ndry cough\ntiredness\nLess common symptoms:\naches and pains\nsore throat\ndiarrhoea\nconjunctivitis\nheadache\nloss of taste or smell\na rash on skin, or discolouration of fingers or toes\nSerious symptoms:\ndifficulty breathing or shortness of breath\nchest pain or pressure\nloss of speech or movement\nSeek immediate medical attention if you have serious symptoms. Always call before visiting your doctor or health facility.\nPeople with mild symptoms who are otherwise healthy should manage their symptoms at home.\nOn average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#basics || @basics:symptoms",
+      "dialog_node": "node_9_1590498718865",
+      "previous_sibling": "node_1_1590498581073"
+    },
+    {
+      "type": "standard",
+      "title": "thanks",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Happy to help."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#thanks",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_4_1590422057790",
+      "previous_sibling": "node_6_1590577304067"
+    },
+    {
+      "type": "standard",
+      "title": "social distancing",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Social distancing is a non-pharmaceutical infection prevention and control intervention implemented to avoid/decrease contact between those who are infected with a disease causing pathogen and those who are not, so as to stop or slow down the rate and extent of disease transmission in a community. This eventually leads to decrease in spread, morbidity and mortality due to the disease."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#socialdistancing || @socialdistancing:(social distancing)",
+      "dialog_node": "node_6_1590511015209",
+      "previous_sibling": "node_10_1590510793568"
+    },
+    {
+      "type": "standard",
+      "title": "china",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "In general, because of poor survivability of these coronaviruses on surfaces, there is likely very low risk of spread from products or packaging that are shipped over a period of days or weeks at ambient temperatures. Coronaviruses are generally thought to be spread most often by respiratory droplets. Currently there is no evidence to support transmission of COVID-19 associated with imported goods and there have not been any cases of COVID-19 in the United States associated with imported goods. Information will be provided on the Coronavirus Disease 2019 (COVID-19) website as it becomes available."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#china",
+      "dialog_node": "node_2_1590510174132",
+      "previous_sibling": "node_6_1590510126901"
+    },
+    {
+      "type": "standard",
+      "title": "corona",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.\nMost people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.  Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.\nThe best way to prevent and slow down transmission is be well informed about the COVID-19 virus, the disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face. \nThe COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).At this time, there are no specific vaccines or treatments for COVID-19. However, there are many ongoing clinical trials evaluating potential treatments. WHO will continue to provide updated information as soon as clinical findings become available."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#basics || @basics:origin",
+      "dialog_node": "node_1_1590498581073",
+      "previous_sibling": "node_7_1590338716804"
+    },
+    {
+      "type": "standard",
+      "title": "news",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "type": "api",
+            "country": "US"
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#news || @news",
+      "dialog_node": "node_6_1590577304067",
+      "previous_sibling": "node_6_1590511740038"
+    },
+    {
+      "type": "standard",
+      "title": "treatment",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "As of now there is no cure for coronavirus. Clinical trials are going on to find a vaccine. Different countries are using different drugs to treat the virus. Different anti-viral and anti-malarial drugs are being used.Some countries are also considering plasma therapy as a treatment option."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#treatment || @treatment:treatment",
+      "dialog_node": "node_8_1590511196226",
+      "previous_sibling": "node_3_1590422288467"
+    },
+    {
+      "type": "standard",
+      "title": "contagious",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Yes, some coronaviruses can be transmitted from person to person, usually after close contact with an infected patient, for example, in a household workplace, or health care centre."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#contagious",
+      "dialog_node": "node_10_1590510793568",
+      "previous_sibling": "node_2_1590510174132"
+    },
+    {
+      "type": "standard",
+      "title": "wash hands",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You should wash your hands for at least 20-30 seconds. An easy way to time it is by singing the full happy birthday song, twice.\nThe same goes for hand sanitizer: use a sanitizer that contains at least 60% alcohol and rub it into your hands for at least 20 seconds to ensure full coverage.\nIn the context of COVID-19 prevention, you should make sure to wash your hands at the following times:\nAfter blowing your nose, coughing or sneezing\nAfter visiting a public space, including public transportation, markets and places of worship\nAfter touching surfaces outside of the home, including money\nBefore, during and after caring for a sick person\nBefore and after eating\nIn general, you should always wash your hands at the following times:\nAfter using the toilet\nBefore and after eating\nAfter handling garbage\nAfter touching animals and pets\nAfter changing babies’ diapers or helping children use the toilet\nWhen your hands are visibly dirty \nTo eliminate all traces of the virus on your hands, a quick scrub and a rinse won’t cut it. Below is a step-by-step process for effective handwashing.\nStep 1: Wet hands with running water\nStep 2: Apply enough soap to cover wet hands\nStep 3: Scrub all surfaces of the hands – including back of hands, between fingers and under nails – for at least 20 seconds.\nStep 4: Rinse thoroughly with running water\nStep 5: Dry hands with a clean cloth or single-use towel"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#washhands || @washhands:wash",
+      "dialog_node": "node_2_1590502584796",
+      "previous_sibling": "node_2_1590420081112"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              },
+              {
+                "text": "It is a difficult time worldwide. So, I am here for your assistance. "
+              },
+              {
+                "text": "How can I assist you?"
+              },
+              {
+                "text": "Hello, what can I do for you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
